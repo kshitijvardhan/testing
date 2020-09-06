@@ -1,0 +1,31 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the countingSort function below.
+def countingSort(arr,n):
+    thislist=[]
+    for x in range(0,101):
+        thislist.append(0)
+    for i in range(0,100):
+        temp=arr.count(i)
+        thislist.insert(i,temp)
+        thislist.pop(i+1)
+    
+    for y in range(0,100):
+        print(thislist[y], end=' ')
+
+
+
+if __name__ == '__main__':
+    
+
+    n = int(input())
+
+    arr = list(map(int, input().rstrip().split()))
+    countingSort(arr,n)
+
